@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #19375b;
+    color: #fff;
+}
+section {
+    height: 100vh;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .head-game ul,
+section .footer-game ul {
+    background-image: linear-gradient(#061423, #0d1f32);
+    border-radius: 10px;
+    padding: 15px 0;
+}
+section .head-game ul li:first-of-type i:nth-child(1){
+    color: #febf14;
+}
+section .head-game ul li:last-of-type i:nth-child(1),
+.overlay .message i {
+    cursor: pointer;
+}
+section .head-game ul li:nth-child(2) span:nth-child(2) {
+    color: #febf14;
+}
+section .footer-game ul li span:nth-child(2) {
+    color: #febf14;
+}
+section .body-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+section .body-game .item {
+    width: calc(95% / 3);
+    height: 100px;
+    background-color: #0d1f32;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    box-shadow: 0 5px 0 rgb(0, 0, 0 , 0.5);
+    color: #ffffffb5;
+}
+section .body-game .item:hover {
+    background-color: #0a1623;
+}
+.overlay {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000054;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay .message {
+    width: 100%;
+    background-color: #061423;
+    text-align: center;
+    box-shadow: 0 10px 20px #000;
+    border-top: 1px solid #19375b;
+    border-bottom: 1px solid #19375b;
+}
+.overlay .message h2 {
+    color: #febf14;
+}
+.overlay .message .close,
+.head-game .reset {
+    transition: .3s;
+}
+.overlay .message .close:hover,
+.head-game .reset:hover {
+    color: #fff !important;
+}
+
+@media (max-width: 991px){
+    section {
+        width: 70%;
+    }
+}
+@media (max-width: 767px){
+    section {
+        width: 100%;
+    }
+}
+@media (max-width: 575px){
+    section .body-game .item {
+        width: calc(90% / 3);
+    }
+}
