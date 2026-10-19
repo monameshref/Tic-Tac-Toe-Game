@@ -102,3 +102,61 @@ section .body-game .item:hover {
         width: calc(90% / 3);
     }
 }
+
+/* ****************** New Features ****************** */
+/* options bar (mode - level - undo - sound - clear) */
+section .options-game ul {
+    background-image: linear-gradient(#061423, #0d1f32);
+    border-radius: 10px;
+    padding: 12px 0;
+    margin: 0;
+}
+section .options-game ul li {
+    cursor: pointer;
+    color: #ffffffb5;
+    transition: .3s;
+    user-select: none;
+}
+section .options-game ul li:hover {
+    color: #fff;
+}
+section .options-game ul li i {
+    color: #febf14;
+}
+section .options-game ul li.disabled {
+    opacity: .35;
+    pointer-events: none;
+}
+
+/* symbols colors + pop animation */
+section .body-game .item i {
+    animation: pop .25s ease;
+}
+section .body-game .item .fa-xmark {
+    color: #febf14;
+}
+@keyframes pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* winning line */
+section .body-game .item.win {
+    background-color: #febf14;
+    animation: winPulse .5s ease 2;
+}
+section .body-game .item.win i {
+    color: #061423;
+}
+@keyframes winPulse {
+    50% { transform: scale(1.1); }
+}
+
+/* shake when the ceil is not empty */
+section .body-game .item.shake {
+    animation: shake .35s;
+}
+@keyframes shake {
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
